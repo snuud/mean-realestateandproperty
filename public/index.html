@@ -16,43 +16,45 @@
 </head>
 <body ng-app="app" class="ng-cloak" ng-controller="MainController as vm" ng-init="vm.init()">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-uppercase" href="#/"><p class="navbar-brand-top">MEANSTACK</p><p class="navbar-brand-bottom">Real Estate & Property</p></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navColl" aria-controls="navColl" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navColl">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#/home">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Property</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#/property">All</a>
-                        <a class="dropdown-item" href="#/buy">Buy</a>
-                        <a class="dropdown-item" href="#/rent">Rent</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#/contact">Contact</a>
-                </li>
-                <li class="nav-item dropdown" ng-if="vm.isLoggedIn()">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#/manageuser">User</a>
-                        <a class="dropdown-item" href="#/manageproperty">Property</a>
-                    </div>
-                </li>
-                <li class="nav-item" ng-if="vm.isLoggedIn()">
-                    <a class="nav-link" href=""><button class="btn btn-danger" ng-click="vm.logout()">Logout</button></a>
-                </li>
-                <li class="nav-item" ng-if="!vm.isLoggedIn()">
-                    <a class="nav-link" href="#/login"><button class="btn btn-success">Login</button></a>
-                </li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand text-uppercase" href="#/"><p class="navbar-brand-top">MEANSTACK</p><p class="navbar-brand-bottom">Real Estate & Property</p></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navColl" aria-controls="navColl" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navColl">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Property</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#/property">All</a>
+                            <a class="dropdown-item" href="#/buy">Buy</a>
+                            <a class="dropdown-item" href="#/rent">Rent</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#/contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown" ng-if="vm.isLoggedIn()">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#/manageuser">User</a>
+                            <a class="dropdown-item" href="#/manageproperty">Property</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" ng-if="vm.isLoggedIn()">
+                        <a class="nav-link" href=""><button class="btn btn-danger" ng-click="vm.logout()">Logout</button></a>
+                    </li>
+                    <li class="nav-item" ng-if="!vm.isLoggedIn()">
+                        <a class="nav-link" href="#/login"><button class="btn btn-success">Login</button></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="content" ng-view></div>

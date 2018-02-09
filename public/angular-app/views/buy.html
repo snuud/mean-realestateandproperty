@@ -1,13 +1,14 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item" aria-current="page">Property</li>
-        <li class="breadcrumb-item active" aria-current="page">Buy Properties</li>
+        <div class="container">
+            <li class="breadcrumb-item active" aria-current="page">Buy Properties</li>
+        </div>
     </ol>
 </nav>
 <br>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-lg-4" ng-repeat="property in vm.properties | orderBy:'-date' | filter:'Buy'">
+        <div class="col-lg-3" ng-repeat="property in vm.properties | orderBy:'-date' | filter:'Buy'">
             <div class="card">
                 <div class="thumbnail">
                     <img class="card-img-top" ng-src="{{property.image}}">

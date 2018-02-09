@@ -1,12 +1,12 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Home Page</li>
+        <div class="container">
+            <li class="breadcrumb-item active" aria-current="page">Home Page</li>
+        </div>
     </ol>
 </nav>
 <br>
-<div class="container-fluid">
-    <h3>New Properties</h3>
-    <hr>
+<div class="container">
     <div class="row">
         <div class="col-lg-4">
             <div class="card">
@@ -42,7 +42,7 @@
                         <div class="text"><a href="#/property/{{vm.new3._id}}" class=" btn btn-info">More Details</a></div>
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">{{vm.new3.option}} {{vm.new3.price | currency}}</h6>
+                        <h6 class="card-title">{{vm.new1.option}} {{vm.new1.price | currency}}</h6>
                     </div>
                 </div>
             </div>
