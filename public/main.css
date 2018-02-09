@@ -31,6 +31,20 @@
     font-size: 20px;
 }
 
+.carousel img {
+  width: 100%;
+  height: 500px;
+}
+
+.carousel-indicators li {
+  height: 10px;
+}
+
+.carousel-caption a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 input[placeholder] {
     text-align: center;
 }

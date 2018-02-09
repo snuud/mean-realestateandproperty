@@ -1,14 +1,41 @@
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <div class="container">
-            <li class="breadcrumb-item active" aria-current="page">Home Page</li>
-        </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-</nav>
-<br>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="#/property/{{vm.feat1._id}}"><img class="d-block w-100" ng-src="{{vm.feat1.image}}" alt="First slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Click to view details</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#/property/{{vm.feat1._id}}"><img class="d-block w-100" ng-src="{{vm.feat2.image}}" alt="Second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Click to view details</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#/property/{{vm.feat1._id}}"><img class="d-block w-100" ng-src="{{vm.feat3.image}}" alt="Second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Click to view details</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
 <div class="container">
+    <h1>Welcome to MEANSTACK Real Estate & Property</h1>
+    <hr>
+    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate tincidunt neque sed varius. Morbi eros urna, dictum et fermentum quis, sodales id felis. Integer auctor porttitor blandit. Quisque sed tortor elit. In maximus erat et interdum mollis. Nulla imperdiet maximus urna et faucibus. Proin vestibulum pretium purus ac commodo. Sed egestas quam elit, quis fermentum odio sodales non. Aliquam finibus lacinia ultrices. Phasellus dolor felis, fringilla ut ipsum in, posuere tincidunt lorem. Sed ac leo et odio congue vehicula eu et nunc. Cras eleifend interdum odio, nec volutpat lorem sagittis in. Etiam lacinia, ipsum eget cursus congue, metus velit elementum arcu, eu vulputate lacus velit et ligula.</p>
+    <p class="text-justify">Nullam ac turpis metus. Nulla eget suscipit tortor, vel lacinia magna. Aliquam tincidunt efficitur turpis. Cras eu dictum ex. Sed quis erat odio. Suspendisse condimentum elit sit amet arcu tempus facilisis id eu turpis. Suspendisse mi diam, hendrerit et felis vel, bibendum faucibus elit. Nulla tincidunt feugiat magna. Sed molestie sapien id condimentum vulputate. Nam ac condimentum libero, vel tempor ligula. Nam dui lacus, tristique at diam et, bibendum feugiat nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+    <br><br><br>
+    <h4>Newly Added Properties</h4>
+    <hr>
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="thumbnail">
                     <img class="card-img-top" ng-src="{{vm.new1.image}}">
@@ -17,11 +44,12 @@
                     </div>
                     <div class="card-body text-center">
                         <h6 class="card-title">{{vm.new1.option}} {{vm.new1.price | currency}}</h6>
+                        <h6>{{vm.new1.location}}</h6>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="thumbnail">
                     <img class="card-img-top" ng-src="{{vm.new2.image}}">
@@ -30,11 +58,12 @@
                     </div>
                     <div class="card-body text-center">
                         <h6 class="card-title">{{vm.new2.option}} {{vm.new2.price | currency}}</h6>
+                        <h6>{{vm.new2.location}}</h6>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-3">
             <div class="card">
                 <div class="thumbnail">
                     <img class="card-img-top" ng-src="{{vm.new3.image}}">
@@ -42,11 +71,31 @@
                         <div class="text"><a href="#/property/{{vm.new3._id}}" class=" btn btn-info">More Details</a></div>
                     </div>
                     <div class="card-body text-center">
-                        <h6 class="card-title">{{vm.new1.option}} {{vm.new1.price | currency}}</h6>
+                        <h6 class="card-title">{{vm.new3.option}} {{vm.new3.price | currency}}</h6>
+                        <h6>{{vm.new3.location}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="thumbnail">
+                    <img class="card-img-top" ng-src="{{vm.new4.image}}">
+                    <div class="middle">
+                        <div class="text"><a href="#/property/{{vm.new4._id}}" class=" btn btn-info">More Details</a></div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{vm.new4.option}} {{vm.new4.price | currency}}</h6>
+                        <h6>{{vm.new4.location}}</h6>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
+    <div class="text-right">
+        <a href="#/rent" class="btn btn-warning"><span>Rent Properties >>></span></a>
+        <a href="#/buy" class="btn btn-info"><span>Buy Properties >>></span></a>
+        <a href="#/property" class="btn btn-success"><span>See All Properties >>></span></a>
+    </div>
+    <br><br><br>
 </div>
