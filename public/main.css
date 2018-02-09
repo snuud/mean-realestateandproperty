@@ -95,6 +95,11 @@ input[placeholder] {
     background-color: #FFFFFF;
 }
 
+#map {
+  width: 100%;
+  height: 400px;
+}
+
 .fixed-bottom .navbar-brand {
     font-size: 15px;
     color: #EEEEEE;
