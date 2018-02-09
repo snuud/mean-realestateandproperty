@@ -100,7 +100,7 @@ input[placeholder] {
   height: 400px;
 }
 
-.fixed-bottom .navbar-brand {
-    font-size: 15px;
+.bottom-brand {
+    font-size: 10px;
     color: #EEEEEE;
 }
