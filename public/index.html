@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MEAN Real Estate & Property</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-startup-image" href="images/ios_startup.png">
+    <link rel="apple-touch-startup-image" href="images/ios_startup@2x.png" sizes="640x920">
+    <link rel="apple-touch-startup-image" href="images/ios_startup-large@2x.png" sizes="640x1096">
+    <link rel="apple-touch-startup-image" href="images/ios_startup-6@2x.png" sizes="750x1294">
+    <link rel="apple-touch-startup-image" href="images/ios_startup-6-plus@3x.png" sizes="1242x2148">
+    <title>MEANSTACK Real Estate & Property</title>
+    <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Play" rel="stylesheet">
 </head>
-<body>
+<body ng-app="app" class="ng-cloak" ng-controller="MainController as vm" ng-init="vm.init()">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-uppercase" href="#/"><p class="navbar-brand-top">MEANSTACK</p><p class="navbar-brand-bottom">Real Estate & Property</p></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navColl" aria-controls="navColl" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navColl">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Property</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#/property">All</a>
+                        <a class="dropdown-item" href="#/buy">Buy</a>
+                        <a class="dropdown-item" href="#/rent">Rent</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#/contact">Contact</a>
+                </li>
+                <li class="nav-item dropdown" ng-if="vm.isLoggedIn()">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#/manageuser">User</a>
+                        <a class="dropdown-item" href="#/manageproperty">Property</a>
+                    </div>
+                </li>
+                <li class="nav-item" ng-if="vm.isLoggedIn()">
+                    <a class="nav-link" href=""><button class="btn btn-danger" ng-click="vm.logout()">Logout</button></a>
+                </li>
+                <li class="nav-item" ng-if="!vm.isLoggedIn()">
+                    <a class="nav-link" href="#/login"><button class="btn btn-success">Login</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content" ng-view></div>
+    <br><br><br>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <a class="navbar-brand mx-auto" href="">2018 MEANSTACK Real Estate & Property. All Rights Reserved.</a>
+    </nav>
 
+    <script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-jwt/dist/angular-jwt.min.js"></script>
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/angular-app/app.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/main-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/home-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/property-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/property-by-id-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/manage-user-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/manage-property-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/about-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/controllers/contact-controller.js"></script>
+    <script type="text/javascript" src="/angular-app/factories/data-factory.js"></script>
+    <script type="text/javascript" src="/angular-app/factories/auth-interceptor.js"></script>
+    <script type="text/javascript" src="/angular-app/factories/auth-factory.js"></script>
 </body>
 </html>

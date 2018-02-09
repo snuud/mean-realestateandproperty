@@ -1,0 +1,87 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+* {
+    font-family: 'Play', sans-serif;
+}
+
+.content {
+    margin-top: 70px;
+}
+
+.fixed-top .navbar-brand-top {
+    font-family: 'Black Ops One', cursive;
+    color: #EEEEEE;
+    letter-spacing: 7px;
+    margin-bottom: 0;
+}
+
+.fixed-top .navbar-brand-bottom {
+    font-size: 15px;
+    margin-bottom: 0;
+    color: #EEEEEE;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+input[placeholder] {
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #CCCCCC;
+    border: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 250px;
+}
+
+.thumbFeat img {
+  width: 100%;
+  height: 400px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.thumbnail:hover img {
+  opacity: 0.3;
+}
+
+.thumbnail:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.jumbotron {
+    background-color: #FFFFFF;
+}
+
+.fixed-bottom .navbar-brand {
+    font-size: 15px;
+    color: #EEEEEE;
+}

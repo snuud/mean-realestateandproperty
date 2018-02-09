@@ -1,0 +1,37 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">Manage</li>
+        <li class="breadcrumb-item active" aria-current="page">Manage User</li>
+    </ol>
+</nav>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3" ng-repeat="user in vm.users">
+            <div class="card">
+                <div class="thumbnail">
+                    <img class="card-img-top" ng-src="https://www.iconexperience.com/_img/o_collection_png/green_dark_grey/512x512/plain/user.png">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{user.username}}</h5>
+                        <button class="btn btn-danger" ng-click="vm.deleteUser(user._id)">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card">
+                <div class="thumbnail">
+                    <img class="card-img-top" ng-src="http://icons.iconarchive.com/icons/icons8/windows-8/256/Users-Add-User-icon.png">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Username: <input type="text" class="form-control" name="username" ng-model="vm.username"></h5>
+                        <h5 class="card-title">Password: <input type="password" class="form-control" name="password" ng-model="vm.password"></h5>
+                        <button class="btn btn-success" ng-click="vm.registerUser()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

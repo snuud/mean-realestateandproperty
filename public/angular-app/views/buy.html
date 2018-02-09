@@ -1,0 +1,24 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">Property</li>
+        <li class="breadcrumb-item active" aria-current="page">Buy Properties</li>
+    </ol>
+</nav>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4" ng-repeat="property in vm.properties | orderBy:'-date' | filter:'Buy'">
+            <div class="card">
+                <div class="thumbnail">
+                    <img class="card-img-top" ng-src="{{property.image}}">
+                    <div class="middle">
+                        <div class="text"><a href="#/property/{{property._id}}" class=" btn btn-info">More Details</a></div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">{{property.option}} {{property.price | currency}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">Manage</li>
+        <li class="breadcrumb-item active" aria-current="page">Manage Property</li>
+    </ol>
+</nav>
+<br>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-sm text-center">
+            <thead class="thead-light">
+                <tr>
+                    <th>Date</th>
+                    <th>Image</th>
+                    <th>Option</th>
+                    <th>Status</th>
+                    <th>District</th>
+                    <th>Location</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Type</th>
+                    <th>Bedroom</th>
+                    <th>Bathroom</th>
+                    <th>Parking</th>
+                    <th>Layout</th>
+                    <th>Land</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td><input type="text" class="form-control" ng-model="vm.image"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.option"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.status"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.district"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.location"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.latitude"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.longitude"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.type"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.bedroom"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.bathroom"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.parking"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.layout"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.land"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.description"></td>
+                    <td><input type="text" class="form-control" ng-model="vm.price"></td>
+                    <td><button class="btn btn-success" ng-click="vm.addProperty()">Add</button></td>
+                </tr>
+                <tr ng-repeat="property in vm.properties | orderBy:'-date'" class="text-nowrap">
+                    <td>{{property.date | date: 'dd-MM-yyyy HH:mm'}}</td>
+                    <td>{{property.image}}</td>
+                    <td>{{property.option}}</td>
+                    <td>{{property.status}}</td>
+                    <td>{{property.district}}</td>
+                    <td>{{property.location}}</td>
+                    <td>{{property.latitude}}</td>
+                    <td>{{property.longitude}}</td>
+                    <td>{{property.type}}</td>
+                    <td>{{property.bedroom}}</td>
+                    <td>{{property.bathroom}}</td>
+                    <td>{{property.parking}}</td>
+                    <td>{{property.layout}}</td>
+                    <td>{{property.land}}</td>
+                    <td>{{property.description}}</td>
+                    <td>{{property.price}}</td>
+                    <td>
+                        <button class=" btn btn-danger" ng-click="vm.deleteProperty(property._id)">Del</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
